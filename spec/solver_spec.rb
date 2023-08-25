@@ -27,6 +27,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.fizzbuzz(15)).to eql("fizzbuzz")
   end
+  it "returns fizz if number is divisble by 3 " do
+    solver = Solver.new
+    expect(solver.fizzbuzz(9)).to eql("fizz")
+  end
 
 end
 end
