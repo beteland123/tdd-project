@@ -15,5 +15,7 @@ class Solver
         word = reversed.join('')
         return word
     end
+    def fizzbuzz(num)
+    end
 
 end
