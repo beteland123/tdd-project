@@ -1,28 +1,29 @@
 class Solver
-    def factorial(num)
-        if num < 0
-           return raise ArgumentError, "Factorial is not defined for negative numbers."
-        elsif num == 0 || num == 1
-            return 1
-        else
-            return num * factorial(num - 1)
-        end
+  def factorial(num)
+    if num.negative?
+      raise ArgumentError, 'Factorial is not defined for negative numbers.'
+    elsif [0, 1].include?(num)
+      1
+    else
+      num * factorial(num - 1)
     end
-    
-    def reverse(str)
-        separated = str.split('')
-        reversed = separated.reverse
-        word = reversed.join('')
-        return word
-    end
-    def fizzbuzz(num)
-        if num % 3 ==0 && num % 5 == 0
-            return "fizzbuzz"
-        elsif num % 3 ==0 
-             return "fizz"
-        elsif num % 5 ==0 
-            return "buzz"
-        end
-    end
+  end
 
+  def reverse(str)
+    separated = str.chars
+    reversed = separated.reverse
+    reversed.join
+  end
+
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
+    else
+      num.to_s
+    end
+  end
 end
