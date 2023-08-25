@@ -7,7 +7,7 @@ describe Solver do
     end
     it "returns 1 for the factorial of the number 0" do
         solver = Solver.new
-        expect(solver.factorial()).to eql(1)
+        expect(solver.factorial(0)).to eql(1)
     end
     it "returns 1 for the factorial of the number 1" do
         solver = Solver.new
