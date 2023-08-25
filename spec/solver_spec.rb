@@ -17,6 +17,10 @@ describe Solver do
         solver = Solver.new
         expect { solver.factorial(-3) }.to raise_error(ArgumentError, "Factorial is not defined for negative numbers.")
     end
-    
+    #test for reverse string
+    it "returns the reverse of the string" do
+        solver = Solver.new
+        expect(solver.reverse("hello")).to eql("olleh")
+    end
 end
 end
