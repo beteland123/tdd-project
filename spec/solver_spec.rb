@@ -13,6 +13,9 @@ describe Solver do
         solver = Solver.new
         expect(solver.factorial(1)).to eql(1)
     end
+    it "raises an exception for negative numbers" do
+        expect { solver.factorial(-3) }.to raise_error(ArgumentError, "Factorial is not defined for negative numbers.")
+    end
     
 end
 end
