@@ -31,6 +31,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.fizzbuzz(9)).to eql("fizz")
   end
+  it "returns buzz if number is divisble by 5 " do
+    solver = Solver.new
+    expect(solver.fizzbuzz(10)).to eql("buzz")
+  end
 
 end
 end
