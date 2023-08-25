@@ -22,5 +22,11 @@ describe Solver do
         solver = Solver.new
         expect(solver.reverse("hello")).to eql("olleh")
     end
+  # test for fizzbuzz
+  it "returns fizzbuzz if number is divisble by 3 and 5" do
+    solver = Solver.new
+    expect(solver.fizzbuzz(15)).to eql("fizzbuzz")
+  end
+
 end
 end
