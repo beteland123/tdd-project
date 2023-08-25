@@ -35,6 +35,10 @@ describe Solver do
     solver = Solver.new
     expect(solver.fizzbuzz(10)).to eql("buzz")
   end
+  it "returns n as string if number is neither divisble by 5 nor by 3 " do
+    solver = Solver.new
+    expect(solver.fizzbuzz(7)).to eql("7")
+  end
 
 end
 end
